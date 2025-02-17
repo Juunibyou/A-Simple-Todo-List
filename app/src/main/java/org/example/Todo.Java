@@ -15,7 +15,7 @@ public class Todo {
     void markComplete(String newtask){
         for (Task task : list){
             if(task.name.equals(newtask) && !task.complete){
-                task.complete();
+                task.iscomplete();
                 return;
             }
         }
@@ -64,6 +64,11 @@ public class Todo {
 
     //Clear all
     void clear(){
+        System.out.println("ToDo list has been cleared....");
         list.clear();
     }
+
+    //For AppTest.java to get the size of the array
+    int getSize(){return list.size();}
+
 }

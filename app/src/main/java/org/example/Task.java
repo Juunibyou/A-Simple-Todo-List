@@ -11,7 +11,7 @@ public class Task {
     }
 
     //Mark Complete
-    public void complete() {
+    public void iscomplete() {
         complete = true;
     }
 
