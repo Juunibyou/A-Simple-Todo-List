@@ -1,6 +1,5 @@
 package org.example;
 
-import org.example.Todo;
 import java.util.ArrayList; 
 
 public class Todo {
@@ -13,16 +12,17 @@ public class Todo {
     }
 
     //Complete a task
-    void complete(String newtask){
+    void markComplete(String newtask){
         for (Task task : list){
             if(task.name.equals(newtask) && !task.complete){
                 task.complete();
                 return;
             }
         }
-        else{System.out.println("Task not found or completed");}
+        System.out.println("Task not found or completed");
     }
 
+    //Display ALL
     void all(){
         if(list.isEmpty()){
             System.out.println("The list is empty...");
@@ -33,6 +33,7 @@ public class Todo {
         }
     }
 
+    //Display COMPLETED
     void complete(){
     boolean present = false;
 
@@ -47,6 +48,7 @@ public class Todo {
         }
     }
 
+    //Display INCOMPLETED
     void incomplete(){
     boolean present = false;
 
@@ -61,6 +63,7 @@ public class Todo {
         }
     }
 
+    //Clear all
     void clear(){
         list.clear();
     }

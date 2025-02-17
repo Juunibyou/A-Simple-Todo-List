@@ -1,4 +1,5 @@
 package org.example;
+
 public class Task {
     String name;
     boolean complete;
@@ -14,6 +15,7 @@ public class Task {
         complete = true;
     }
 
+    //Assign Completed or Incompleted
     @Override
     public String toString() {
         return (complete ? "[Completed] " : "[Incomplete] ") + name;

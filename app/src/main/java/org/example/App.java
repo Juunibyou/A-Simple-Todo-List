@@ -32,7 +32,7 @@ public class App {
         case 'B': //Mark Task as complete
           System.out.print("Enter a task to mark as complete: ");
           String ToComplete = scanner.nextLine();
-          list.complete(ToComplete);
+          list.markComplete(ToComplete);
           break;
 
         case 'C': //View all task
@@ -53,8 +53,8 @@ public class App {
 
         case 'G': //Exit Program
           System.out.println("Exiting program....");
-          return;
-          break;
+          System.exit(0);
+        break;
 
         default:
           System.out.println("Invalid input. Please choose a valid option.");
