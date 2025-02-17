@@ -58,9 +58,8 @@ public class Todo {
                 present = true;
             }
         }
-        if(!present){
-            System.out.println("No task found");
-        }
+
+        if(!present){System.out.println("No task found");}
     }
 
     //Clear all

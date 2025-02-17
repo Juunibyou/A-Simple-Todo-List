@@ -8,6 +8,8 @@ public class App {
     Scanner scanner = new Scanner(System.in);
 
     while(true){
+    //Interface for User
+      System.out.println("\n|----------ToDo-Option----------|");
       System.out.println("Welcome to the ToDo List!");
       System.out.println("What Would you like to do?\n");
       System.out.println("A) Add new task");
@@ -18,13 +20,16 @@ public class App {
       System.out.println("F) Clear all task");
       System.out.println("G) Exit");
 
-      System.out.println("User input: ");
+      System.out.print("User input: ");
       char input = scanner.next().charAt(0);
       scanner.nextLine();
 
+      //handle both uppercase and lowercase
+      input = Character.toUpperCase(input);
+
       switch(input){
         case 'A': //Add new task
-          System.out.print("Enter: ");
+          System.out.print("\nEnter: ");
           String A = scanner.nextLine();
           list.add(A);
           break;
@@ -60,34 +65,6 @@ public class App {
           System.out.println("Invalid input. Please choose a valid option.");
       }
     }
-
-      // // Add tasks
-      // list.add("Buy milk");
-      // list.add("Buy eggs");
-      // list.add("Prepare a lesson for CSC 122");
-      // list.add("Sow beet seeds");
-
-      // // Mark task as completed
-      // list.complete("Buy eggs");
-      
-      // // Show all tasks
-      // System.out.println("All tasks:");
-      // list.all();
-      
-      // // Show completed tasks
-      // System.out.println("\nCompleted tasks:");
-      // list.complete();
-      
-      // // Show incomplete tasks
-      // System.out.println("\nIncomplete tasks:");
-      // list.incomplete();
-      
-      // // Clear the to-do list
-      // list.clear();
-      
-      // // Show all tasks again (should be empty)
-      // System.out.println("\nAfter clearing, all tasks:");
-      // list.all();
   }
 
 }
